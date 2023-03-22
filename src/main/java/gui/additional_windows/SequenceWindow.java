@@ -7,6 +7,7 @@ import javafx.scene.control.Alert;
 import static gui.main_window.PrimerDesigner.getIcon;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
 import static gui.main_window.PrimerDesigner.getMainStage;
 
 public class SequenceWindow {

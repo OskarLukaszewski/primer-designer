@@ -1,6 +1,7 @@
 package functionalities.primers.main_tools.primer_designing.analysing_primers;
 
 import java.util.ArrayList;
+
 import functionalities.primers.main_tools.primer_designing.analysing_primers.analysing_requirements.*;
 import functionalities.primers.main_tools.primer_designing.getting_raw_primers.SequenceCrawler;
 

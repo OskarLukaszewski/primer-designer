@@ -3,7 +3,7 @@ package functionalities.primers.main_tools.primer_designing.getting_raw_primers;
 import functionalities.primers.main_tools.sequence_conversion.PrimersHeaderTools;
 import functionalities.primers.main_tools.sequence_conversion.PrimersLineConverter;
 
-class SequenceProcessor {
+public class SequenceProcessor {
     
     String[][] sequences;
     String[] sequence;
@@ -15,7 +15,7 @@ class SequenceProcessor {
 
     String forFlank, revFlank;
 
-    String[] isolateFlanks(int numberOfSequence, int[][] flankPositions, boolean[] toDesign) throws Exception{
+    public String[] isolateFlanks(int numberOfSequence, int[][] flankPositions, boolean[] toDesign) throws Exception{
 
         Exception exception = new Exception("Search fields out of bounds.");
 
@@ -42,7 +42,7 @@ class SequenceProcessor {
         return new String[]{this.forFlank, this.revFlank};
     }
 
-    int isolateSequences(String[] sequence) {
+    public int isolateSequences(String[] sequence) {
 
         this.sequences = PrimersHeaderTools.removeHeaders(sequence);
 

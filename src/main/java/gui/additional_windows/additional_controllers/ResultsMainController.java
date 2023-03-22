@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import functionalities.primers.services.DecipherIdService;
+
 import java.io.IOException;
 
 public class ResultsMainController {
