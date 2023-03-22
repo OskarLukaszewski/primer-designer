@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="532.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.main_window.MainController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" contentDisplay="CENTER" focusTraversable="false" maxHeight="150.0" maxWidth="530.0" prefHeight="202.0" prefWidth="525.0" text="Define a path to a FASTA file" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <content>
+            <FlowPane alignment="CENTER" prefHeight="50.0" prefWidth="523.0">
+               <children>
+                  <TextField fx:id="pathEntry" prefHeight="30.0" prefWidth="400.0" promptText="Path to a FASTA file">
+                     <FlowPane.margin>
+                        <Insets />
+                     </FlowPane.margin>
+                  </TextField>
+                  <Button fx:id="pathButton" mnemonicParsing="false" onAction="#filePathButtonClick" prefHeight="30.0" prefWidth="100.0" text="Select file">
+                     <FlowPane.margin>
+                        <Insets left="5.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+            </FlowPane>
+         </content>
+         <GridPane.margin>
+            <Insets left="1.0" />
+         </GridPane.margin>
+      </TitledPane>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" focusTraversable="false" maxHeight="120.0" maxWidth="530.0" prefHeight="121.0" prefWidth="530.0" text="Choose primers" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <content>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <CheckBox fx:id="forCheckBox" mnemonicParsing="false" onAction="#forCheckBoxChange" selected="true" text="Forward primers" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                     <children>
+                        <CheckBox fx:id="revCheckBox" mnemonicParsing="false" onAction="#revCheckBoxChange" selected="true" text="Reverse primers" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Separator orientation="VERTICAL" prefHeight="20.0" />
+                     </children>
+                  </FlowPane>
+               </children>
+            </GridPane>
+         </content>
+         <GridPane.margin>
+            <Insets left="1.0" />
+         </GridPane.margin>
+      </TitledPane>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" focusTraversable="false" maxHeight="250.0" maxWidth="530.0" minHeight="96.0" prefHeight="530.0" prefWidth="530.0" text="Define search fields" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <content>
+            <GridPane alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="260.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="163.0" minWidth="9.0" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="301.0" minWidth="10.0" prefWidth="260.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+              </rowConstraints>
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <top>
+                        <Label text="Forward primers" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </top>
+                     <center>
+                        <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="35.0" text="From">
+                                 <FlowPane.margin>
+                                    <Insets right="5.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <TextField fx:id="forFromEntry" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="50.0" />
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="35.0" text="to" />
+                              <TextField fx:id="forToEntry" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="50.0" />
+                           </children>
+                        </FlowPane>
+                     </center>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <top>
+                        <Label text="Reverse primers" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" />
+                           </BorderPane.margin>
+                        </Label>
+                     </top>
+                     <center>
+                        <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="35.0" text="From">
+                                 <FlowPane.margin>
+                                    <Insets right="5.0" />
+                                 </FlowPane.margin>
+                              </Label>
+                              <TextField fx:id="revFromEntry" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="50.0" />
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="35.0" text="to" />
+                              <TextField fx:id="revToEntry" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="50.0" />
+                           </children>
+                        </FlowPane>
+                     </center>
+                  </BorderPane>
+                  <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Separator orientation="VERTICAL" prefHeight="50.0" />
+                     </children>
+                  </FlowPane>
+               </children>
+            </GridPane>
+         </content>
+         <GridPane.margin>
+            <Insets left="1.0" />
+         </GridPane.margin>
+      </TitledPane>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" focusTraversable="false" maxWidth="530.0" prefHeight="530.0" prefWidth="530.0" text="Define primer properties" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <content>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="260.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="260.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <Label text="Melting temperature" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" />
+                           </BorderPane.margin></Label>
+                     </top>
+                     <center>
+                        <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="35.0" text="From">
+                                 <FlowPane.margin>
+                                    <Insets />
+                                 </FlowPane.margin>
+                              </Label>
+                              <TextField fx:id="tmFromEntry" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="50.0" />
+                              <Label alignment="CENTER" prefHeight="30.0" prefWidth="35.0" text="to" />
+                              <TextField fx:id="tmToEntry" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="50.0" />
+                           </children>
+                        </FlowPane>
+                     </center>
+                  </BorderPane>
+                  <BorderPane maxHeight="300.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                     <top>
+                        <Label text="Length" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets bottom="5.0" />
+                           </BorderPane.margin></Label>
+                     </top>
+                     <center>
+                        <GridPane BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="110.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="10.0" minWidth="10.0" prefWidth="10.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="200.0" minWidth="10.0" prefWidth="110.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <RadioButton fx:id="rbSingleValue" mnemonicParsing="false" onAction="#rbSingleValueChange" selected="true" text="Single value">
+                                       <FlowPane.margin>
+                                          <Insets bottom="10.0" />
+                                       </FlowPane.margin>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="Length" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <RadioButton fx:id="rbRange" mnemonicParsing="false" onAction="#rbRangeChange" text="Range" toggleGroup="$Length">
+                                       <FlowPane.margin>
+                                          <Insets bottom="10.0" left="20.0" />
+                                       </FlowPane.margin>
+                                    </RadioButton>
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="singleValueEntry" alignment="CENTER_RIGHT" prefWidth="35.0" />
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="CENTER_LEFT" maxHeight="100.0" minHeight="30.0" prefHeight="33.0" prefWidth="68.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="fromRangeEntry" alignment="CENTER_RIGHT" disable="true" prefWidth="35.0">
+                                       <FlowPane.margin>
+                                          <Insets left="15.0" />
+                                       </FlowPane.margin>
+                                    </TextField>
+                                    <Label alignment="CENTER" prefWidth="10.0" text="-">
+                                       <FlowPane.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </FlowPane.margin>
+                                    </Label>
+                                    <TextField fx:id="toRangeEntry" alignment="CENTER_RIGHT" disable="true" maxWidth="35.0" />
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Separator orientation="VERTICAL" prefHeight="25.0" valignment="BOTTOM" />
+                                 </children>
+                              </FlowPane>
+                              <FlowPane alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <Separator orientation="VERTICAL" prefHeight="25.0" />
+                                 </children>
+                              </FlowPane>
+                           </children>
+                        </GridPane>
+                     </center>
+                  </BorderPane>
+                  <FlowPane alignment="CENTER" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Separator orientation="VERTICAL" prefHeight="70.0" />
+                     </children>
+                  </FlowPane>
+               </children>
+            </GridPane>
+         </content>
+         <GridPane.margin>
+            <Insets left="1.0" />
+         </GridPane.margin>
+      </TitledPane>
+      <GridPane GridPane.rowIndex="4">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <FlowPane alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="visualizeButton" mnemonicParsing="false" onAction="#visualizeButtonClick" prefHeight="30.0" text="Edit sequence">
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                     <FlowPane.margin>
+                        <Insets left="10.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+            </FlowPane>
+            <FlowPane alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Button fx:id="advancedOptionsButton" mnemonicParsing="false" onAction="#advancedOptionsButtonClick" prefHeight="30.0" text="Advanced options">
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="designButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#designButtonClick" prefHeight="30.0" text="Design">
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                     <FlowPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+            </FlowPane>
+         </children>
+      </GridPane>
+   </children>
+</GridPane>

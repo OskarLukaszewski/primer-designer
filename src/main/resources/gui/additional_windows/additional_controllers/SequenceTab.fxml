@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import gui.custom_elements.MyHTMLEditor?>
+<Tab text="Sequence #1" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <MyHTMLEditor fx:id="textArea" htmlText=""/>
+   </content>
+</Tab>
