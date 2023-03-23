@@ -4,8 +4,8 @@ import static java.lang.Math.abs;
 
 public class TmAnalyzer {
 
-    double meltingTemp;
-    double precision;
+    private final double meltingTemp;
+    private final double precision;
 
     public TmAnalyzer(double[] meltingTemp) {
         this.meltingTemp = (meltingTemp[1]+meltingTemp[0])/2;
